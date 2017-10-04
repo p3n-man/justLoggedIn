@@ -1,0 +1,2 @@
+# justLoggedIn
+Create 'loggedIn' cookie
