@@ -1,0 +1,31 @@
+<script>
+function () {
+	var login = {{Cookie - login}},
+		loggedIn = {{Cookie - loggedIn}};
+		createCookie = function(name, value, days) {
+            var expires = '',
+                date = new Date();
+            if (days) {
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = '; expires=' + date.toGMTString();
+            }
+            document.cookie = name + '=' + value + expires + '; path=/; domain=bmj.com';
+        };
+        deleteCookie = function(name) {
+    		document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+		}; 
+
+
+	if login string.match(.+) {
+		if loggedIn == "true" {
+		}
+		else if loggedIn == "justLoggedIn" {
+			createCookie ('loggedIn', 'true', 2);
+		}
+		else {
+			createCookie ('loggedIn','justLoggedIn', 2);
+		}
+	}
+	else deleteCookie ('loggedIn');
+}
+</script>
