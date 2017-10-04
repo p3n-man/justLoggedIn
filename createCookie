@@ -17,7 +17,7 @@
 		}; 
 
 
-	if (login = string.match(.+)) {
+	if (login) {
 		if (loggedIn == "true") {
 		}
 		else if (loggedIn == "justLoggedIn") {
@@ -27,6 +27,8 @@
 			createCookie ('loggedIn','justLoggedIn', 2);
 		}
 	}
-	else deleteCookie ('loggedIn');
+	else {
+			createCookie ('loggedIn','false', 2);
+		}
 }());
 </script>
