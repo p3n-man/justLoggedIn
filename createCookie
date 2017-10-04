@@ -1,7 +1,8 @@
 <script>
-function () {
+(function(){
+  	'use strict';
 	var login = {{Cookie - login}},
-		loggedIn = {{Cookie - loggedIn}};
+		loggedIn = {{Cookie - loggedIn}},
 		createCookie = function(name, value, days) {
             var expires = '',
                 date = new Date();
@@ -16,10 +17,10 @@ function () {
 		}; 
 
 
-	if login string.match(.+) {
-		if loggedIn == "true" {
+	if (login = string.match(.+)) {
+		if (loggedIn == "true") {
 		}
-		else if loggedIn == "justLoggedIn" {
+		else if (loggedIn == "justLoggedIn") {
 			createCookie ('loggedIn', 'true', 2);
 		}
 		else {
@@ -27,5 +28,5 @@ function () {
 		}
 	}
 	else deleteCookie ('loggedIn');
-}
+}());
 </script>
